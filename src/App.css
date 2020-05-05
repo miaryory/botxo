@@ -1,38 +1,241 @@
-.App {
+header {
+  /* border: 1px solid white; */
   text-align: center;
+  padding: 20px;
+  background-color: var(--dark-purple);
+  padding-right: 10vw;
+  padding-left: 10vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#logo {
+  width: 180px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+header a:link,
+header a:visited,
+header a:active {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+header a:hover {
+  color: var(--pink);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+header .navigation {
+  padding-top: 30px;
+}
+
+.navigation {
+  display: none;
+}
+
+/****************BANNER***********************/
+
+#banner {
+  /* border: 1px solid white; */
+  background-color: var(--dark-purple);
+  /* height: 85vh; */
+  color: white;
+  text-align: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  padding-right: 5vw;
+  padding-left: 5vw;
+}
+
+#banner h1 {
+  font-size: 2.5em;
+  font-weight: 500;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+#banner h2 {
+  font-weight: normal;
+  padding-top: 20px;
+}
+
+#banner .CTA {
+  padding-top: 50px;
+}
+
+button {
+  border: none;
+  width: 250px;
+  padding: 17px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.pink-btn {
+  background-color: var(--pink);
+  color: white;
+}
+
+.white-btn {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+#banner .trial,
+#banner .demo {
+  margin: 3%;
+}
+
+/****************FEATURES***********************/
+
+#features,
+#installation {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  text-align: center;
+}
+
+.all-features {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.all-features .one-feature {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10%;
+  margin: 7%;
+  word-wrap: break-word;
+}
+
+.all-features .one-feature .feature-icon {
+  width: 100px;
+}
+
+.all-features .one-feature .feature-description {
+  margin-top: 20px;
+  text-align: left;
+}
+
+/****************INSTALLATION***********************/
+#installation .step {
+  padding: 7%;
+}
+
+#installation .step img {
+  width: 75vw;
+  margin-top: 20px;
+}
+
+#installation .step-desktop {
+  display: none;
+}
+
+/****************TABLET VIEW***********************/
+@media all and (min-width:768px) {
+  header {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navigation {
+    text-align: right;
+    display: block;
+  }
+
+  .navigation a {
+    padding: 5%;
+  }
+
+  #features h1,
+  #installation h1 {
+    font-size: 2.7em;
+  }
+
+  /****************TABLET BANNER***********************/
+
+  #banner {
+    padding-top: 17vh;
+    padding-right: 10vw;
+    padding-left: 10vw;
+  }
+
+  #banner h1 {
+    font-size: 3em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #banner .CTA {
+    padding-top: 20px;
+  }
+
+  /****************TABLET FEATURES***********************/
+  #features,
+  #installation {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
+  .all-features .one-feature {
+    margin: 10%;
+  }
+
+  /****************TABLET INSTALLATION***********************/
+
+  #installation .step {
+    padding: 3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    align-items: center;
+  }
+
+  #installation .step .text p {
+    width: 85%;
+  }
+
+  #installation .step .text h2:before {
+    content: "‎‎‎----";
+    display: block;
+    width: 20%;
+    color: var(--pink);
+    font-size: 4px;
+    border-radius: 5px;
+    background-color: var(--pink);
+    margin-bottom: 10px;
+  }
+
+  #installation .step img {
+    width: 100%;
+    margin-top: inherit;
+  }
+
+  #installation .step-mobile {
+    display: none;
+  }
+}
+
+/****************DESKTOP VIEW***********************/
+@media all and (min-width:1281px) {
+
+  /****************DESKTOP BANNER***********************/
+
+  #banner h1 {
+    font-size: 4em;
+  }
+
+  /****************DESKTOP FEATURES***********************/
+  .all-features {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .all-features .one-feature {
+    margin: 5%;
   }
 }
