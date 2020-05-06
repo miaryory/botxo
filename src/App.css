@@ -48,6 +48,7 @@ header .navigation {
   font-weight: 500;
   padding-top: 30px;
   padding-bottom: 20px;
+  line-height: 1;
 }
 
 #banner h2 {
@@ -76,7 +77,7 @@ button {
 
 .white-btn {
   background-color: transparent;
-  border: 1px solid white;
+  border: 2px solid white;
   color: white;
 }
 
@@ -92,8 +93,13 @@ button {
   padding-left: 5vw;
   padding-right: 5vw;
   padding-top: 5vh;
-  padding-bottom: 5vh;
+  padding-bottom: 15vh;
   text-align: center;
+}
+
+#features {
+  background-color: var(--dark-purple);
+  color: white;
 }
 
 .all-features {
@@ -104,6 +110,7 @@ button {
 
 .all-features .one-feature {
   background-color: white;
+  color: black;
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10%;
@@ -160,19 +167,22 @@ button {
   /****************TABLET BANNER***********************/
 
   #banner {
-    padding-top: 17vh;
+    padding-top: 20vh;
     padding-right: 10vw;
     padding-left: 10vw;
+    padding-bottom: 15vh;
+    /* min-height: 80vh; */
   }
 
   #banner h1 {
-    font-size: 3em;
+    font-size: 3.5em;
     padding-top: 10px;
     padding-bottom: 10px;
   }
 
-  #banner .CTA {
-    padding-top: 20px;
+  #banner .trial,
+  #banner .demo {
+    margin: 1%;
   }
 
   /****************TABLET FEATURES***********************/
@@ -205,8 +215,8 @@ button {
     display: block;
     width: 20%;
     color: var(--pink);
-    font-size: 4px;
-    border-radius: 5px;
+    font-size: 3px;
+    border-radius: 2px;
     background-color: var(--pink);
     margin-bottom: 10px;
   }
@@ -227,7 +237,7 @@ button {
   /****************DESKTOP BANNER***********************/
 
   #banner h1 {
-    font-size: 4em;
+    font-size: 4.5em;
   }
 
   /****************DESKTOP FEATURES***********************/
