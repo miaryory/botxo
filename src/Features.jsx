@@ -6,7 +6,7 @@ function Features() {
   return (
     <div id="features">
       <h1>More than just a tool</h1>
-      <h2>Explore what we can do for you</h2>
+      <p>Explore what we can do for you</p>
       <div className="all-features">
         <div className="one-feature">
           <img className="feature-icon" src={Icon} alt="Feature Icon" />

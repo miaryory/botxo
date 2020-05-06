@@ -17,7 +17,17 @@ header a:active {
   color: white;
 }
 
-header a:hover {
+footer a:link,
+footer a:visited,
+footer a:active {
+  color: black;
+  opacity: 0.8;
+  font-size: 14px;
+  margin: 1%;
+}
+
+header a:hover,
+footer a:hover {
   color: var(--pink);
 }
 
@@ -27,6 +37,12 @@ header .navigation {
 
 .navigation {
   display: none;
+}
+
+footer {
+  height: 50px;
+  align-items: center;
+  text-align: center;
 }
 
 /****************BANNER***********************/
@@ -81,19 +97,20 @@ button {
   color: white;
 }
 
-#banner .trial,
-#banner .demo {
+.trial,
+.demo {
   margin: 3%;
 }
 
 /****************FEATURES***********************/
 
 #features,
-#installation {
+#installation,
+#socialproof {
   padding-left: 5vw;
   padding-right: 5vw;
   padding-top: 5vh;
-  padding-bottom: 15vh;
+  padding-bottom: 10vh;
   text-align: center;
 }
 
@@ -108,7 +125,8 @@ button {
   grid-template-columns: 1fr 1fr;
 }
 
-.all-features .one-feature {
+.all-features .one-feature,
+#ctabottom {
   background-color: white;
   color: black;
   border-radius: 5px;
@@ -141,8 +159,35 @@ button {
   display: none;
 }
 
+/****************CTA BOTTOM***********************/
+
+#ctabottom .white-btn {
+  border: 2px solid var(--pink);
+  color: var(--pink);
+}
+
+#ctabottom {
+  text-align: center;
+  padding: 3%;
+}
+
+/****************SOCIAL PROOF***********************/
+#socialproof .company-logo {
+  width: 100%;
+  max-width: 150px;
+  filter: grayscale(100%);
+  margin: auto;
+  margin-top: 30px;
+}
+
+#socialproof .all-logos {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 /****************TABLET VIEW***********************/
-@media all and (min-width:768px) {
+@media all and (min-width: 768px) {
   header {
     text-align: left;
     display: grid;
@@ -160,7 +205,8 @@ button {
   }
 
   #features h1,
-  #installation h1 {
+  #installation h1,
+  #socialproof h1 {
     font-size: 2.7em;
   }
 
@@ -229,11 +275,28 @@ button {
   #installation .step-mobile {
     display: none;
   }
+
+  /****************TABLET CTA BOTTOM***********************/
+
+  #ctabottom {
+    padding: 4%;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+
+  /****************TABLET SOCIAL PROOF***********************/
+
+  #socialproof .all-logos {
+    width: 60vw;
+    margin: auto;
+    margin-top: 50px;
+  }
 }
 
 /****************DESKTOP VIEW***********************/
-@media all and (min-width:1281px) {
-
+@media all and (min-width: 1281px) {
   /****************DESKTOP BANNER***********************/
 
   #banner h1 {
@@ -247,5 +310,12 @@ button {
 
   .all-features .one-feature {
     margin: 5%;
+  }
+
+  /****************DESKTOP CTA BOTTOM***********************/
+
+  #ctabottom {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
   }
 }
