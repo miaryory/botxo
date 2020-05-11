@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+import TrialBtn from "./Components/Trial";
+import DemoBtn from "./Components/Demo";
 
 function Banner() {
   return (
@@ -11,12 +13,8 @@ function Banner() {
       </h1>
       <h2>Let your new AI chatbot be your 1st line support, 24/7</h2>
       <div className="CTA">
-        <button className="pink-btn trial" type="submit">
-          Start Trial
-        </button>
-        <button className="white-btn demo" type="submit">
-          Book Demo
-        </button>
+        <TrialBtn />
+        <DemoBtn />
       </div>
     </div>
   );

@@ -186,6 +186,126 @@ button {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+/****************FORM***********************/
+.form-layer {
+  position: fixed;
+  background-color: rgb(0, 0, 0, 0.7);
+  z-index: 10;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.my-form {
+  text-align: left;
+  width: 90vw;
+  height: 95%;
+  overflow-y: scroll;
+  max-width: 500px;
+  color: black;
+  margin: auto;
+  margin-top: 20px;
+  padding: 6%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: grey var(--light-grey);
+}
+
+.my-form::-webkit-scrollbar {
+  width: 11px;
+}
+
+.my-form::-webkit-scrollbar-track {
+  background: var(--light-grey);
+}
+
+.my-form::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 6px;
+  border: 2px solid var(--light-grey);
+}
+
+.form-cross {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  cursor: pointer;
+}
+
+.form-cross:hover {
+  color: var(--orange);
+}
+
+.my-form .form-headline {
+  font-size: 2em;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  line-height: 1;
+}
+
+form input {
+  height: 44px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.219);
+  font-weight: normal;
+  font-size: 14px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+form input:focus {
+  outline: 3px solid var(--blue);
+}
+
+form label {
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
+  margin-top: 20px;
+}
+
+.password label {
+  width: 80%;
+  display: inline-block;
+}
+
+.password .show {
+  display: inline-block;
+  width: 20%;
+  height: 44px;
+  max-width: 50px;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+form .note {
+  opacity: 0.8;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.errorMsg {
+  display: block;
+  font-weight: normal;
+  font-size: 12px;
+  color: var(--pink);
+  margin-left: 3px;
+  text-align: left;
+}
+
 /****************TABLET VIEW***********************/
 @media all and (min-width: 768px) {
   header {
@@ -284,6 +404,7 @@ button {
     margin-left: auto;
     margin-right: auto;
     align-items: center;
+    background-color: var(--orange);
   }
 
   /****************TABLET SOCIAL PROOF***********************/
@@ -317,5 +438,11 @@ button {
   #ctabottom {
     display: grid;
     grid-template-columns: 1fr 2fr;
+  }
+
+  /****************DESKTOP FORM***********************/
+  .my-form {
+    max-width: 550px;
+    padding: 4%;
   }
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+import TrialBtn from "./Components/Trial";
+import DemoBtn from "./Components/Demo";
 
 function CTABottom() {
   return (
@@ -9,12 +11,8 @@ function CTABottom() {
         <p>✓ 14 days trial ✓ Easy set-up ✓ No credit card required</p>
       </div>
       <div className="CTA">
-        <button className="pink-btn trial" type="submit">
-          Start Trial
-        </button>
-        <button className="white-btn demo" type="submit">
-          Book Demo
-        </button>
+        <TrialBtn />
+        <DemoBtn />
       </div>
     </div>
   );
