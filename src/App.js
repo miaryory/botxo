@@ -6,6 +6,7 @@ import Features from "./Features";
 import Installation from "./Installation";
 import CTABottom from "./CTABottom";
 import SocialProof from "./SocialProof";
+import Pricing from "./Pricing";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Banner />
         <Features />
         <Installation />
+        <Pricing />
         <SocialProof />
         <CTABottom />
       </main>
