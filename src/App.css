@@ -213,14 +213,16 @@ button {
 
 /****************CTA BOTTOM***********************/
 
-#ctabottom .white-btn {
+/* #ctabottom .white-btn {
   border: 2px solid var(--pink);
   color: var(--pink);
-}
+} */
 
 #ctabottom {
   text-align: center;
   padding: 3%;
+  background-color: var(--dark-purple);
+  color: white;
 }
 
 /****************SOCIAL PROOF***********************/
@@ -257,7 +259,6 @@ button {
   max-width: 500px;
   color: black;
   margin: auto;
-  margin-top: 20px;
   padding: 6%;
   background-color: white;
   border-radius: 5px;
@@ -265,6 +266,16 @@ button {
   position: relative;
   scrollbar-width: thin;
   scrollbar-color: grey var(--light-grey);
+  animation: show 0.5s forwards;
+}
+
+@keyframes show {
+  0% {
+    margin-top: -500px;
+  }
+  100% {
+    margin-top: 20px;
+  }
 }
 
 .my-form::-webkit-scrollbar {
@@ -458,7 +469,6 @@ form .note {
     margin-left: auto;
     margin-right: auto;
     align-items: center;
-    background-color: var(--orange);
   }
 
   /****************TABLET SOCIAL PROOF***********************/
