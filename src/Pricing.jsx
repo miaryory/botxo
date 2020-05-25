@@ -5,10 +5,7 @@ function Pricing() {
   return (
     <div id="pricing">
       <h1>Our pricing</h1>
-      <p>
-        Simple, flexible pricing options. Suited to how you want to buy.
-        <br /> Pay as you go or let us reward you for the extra commitment.
-      </p>
+      <p>Simple, flexible pricing options. Suited to how you want to buy.</p>
 
       <div className="pricing-tables">
         <div className="enterprise pricing-plan">

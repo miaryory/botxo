@@ -2,11 +2,12 @@ import React from "react";
 import "./App.css";
 import TrialBtn from "./Components/Trial";
 import DemoBtn from "./Components/Demo";
+import Bubble from "./Icons/bubble.svg";
 
 function Banner() {
   return (
     <div id="banner">
-      <h3>AI Chatbots</h3>
+      <img id="chat-bubble" src={Bubble} alt="Chat bubble" />
       <h1>
         Build a bot to engage customers
         <br /> and boost sales
