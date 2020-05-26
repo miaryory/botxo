@@ -20,7 +20,8 @@ function Trial() {
         Start Trial
       </button>
       {modalIsOpen ? (
-        <div className="form-layer" onClick={closeModal}>
+        <>
+          <div className="form-layer" onClick={closeModal}></div>
           <div className="my-form">
             <p
               onClick={closeModal}
@@ -31,7 +32,7 @@ function Trial() {
             </p>
             <Form formType="Trial" />
           </div>
-        </div>
+        </>
       ) : (
         <></>
       )}

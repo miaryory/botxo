@@ -20,7 +20,8 @@ function Demo() {
         Book Demo
       </button>
       {modalIsOpen ? (
-        <div className="form-layer" onClick={closeModal}>
+        <>
+          <div className="form-layer" onClick={closeModal}></div>
           <div className="my-form">
             <p
               onClick={closeModal}
@@ -31,7 +32,7 @@ function Demo() {
             </p>
             <Form formType="Demo" />
           </div>
-        </div>
+        </>
       ) : (
         <></>
       )}

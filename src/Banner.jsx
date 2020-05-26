@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import TrialBtn from "./Components/Trial";
 import DemoBtn from "./Components/Demo";
-import Bubble from "./Icons/bubble.svg";
+import Bubble from "./Icons/bubbles.svg";
 
 function Banner() {
   return (

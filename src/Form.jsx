@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+let Recaptcha = require("react-recaptcha");
+
+let callback = function () {
+  console.log("Done");
+};
 
 const Form = (props) => {
   const [firstname, setFirstname] = useState("");
@@ -202,10 +207,13 @@ const Form = (props) => {
           <></>
         )}
 
-        <label>
-          CAPTCHA
-          <input type="text" name="captcha" />
-        </label>
+        <div className="recaptcha">
+          <Recaptcha
+            sitekey="6Le3OPwUAAAAAAUl7MH2lBijB2A86SmJjgwuUCDM"
+            render="explicit"
+            onloadCallback={callback}
+          />
+        </div>
 
         <p className="note">
           By using BotXO you agree to our{" "}
