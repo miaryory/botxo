@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 let Recaptcha = require("react-recaptcha");
 
@@ -16,26 +16,79 @@ const Form = (props) => {
   const [showPassword, setShow] = useState(false);
   const [showPasswordBtn, setShowBtn] = useState("Show");
 
+  //fetching all the current users whi have an account and store it
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetch(
+      "https://kea3rdsemester-91fd.restdb.io/rest/" +
+        "botxo?fetchchildren=true",
+      {
+        method: "get",
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+          "x-apikey": "5d887df9fd86cb75861e2626",
+          "cache-control": "no-cache",
+        },
+      }
+    )
+      .then((e) => e.json())
+      .then((e) => setUsers(e));
+  }, []);
+
+  //checking if the user is already stocked in the DB
+  function isMember(a, obj) {
+    var i = a.length;
+    while (i--) {
+      if (a[i].email === obj) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
-    const user = {
-      firstname: firstname,
-      lastname: lastname,
-      email: email,
-      company: company,
-      password: password,
-      tel: tel,
-      from: props.formType,
-    };
-    fetch("https://kea3rdsemester-91fd.restdb.io/rest/botxo", {
-      method: "POST",
-      body: JSON.stringify(user),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    clearForm(data);
+    //check if the user already have an account
+    if (isMember(users, email)) {
+      alert("You already signed up for a free trial.");
+      setSubmit(false);
+    } else {
+      const user = {
+        firstname: firstname,
+        lastname: lastname,
+        email: email,
+        company: company,
+        password: password,
+        tel: tel,
+        from: props.formType,
+      };
+      fetch("https://kea3rdsemester-91fd.restdb.io/rest/botxo", {
+        method: "POST",
+        body: JSON.stringify(user),
+        headers: {
+          "Content-Type": "application/json",
+          "x-apikey": "5d887df9fd86cb75861e2626",
+          "cache-control": "no-cache",
+        },
+      })
+        .then(clearForm(data))
+        .then(setSubmit(true));
+    }
   };
+
+  const [submit, setSubmit] = useState(false);
+
+  if (submit) {
+    return (
+      <div className="thank-msg">
+        <h1>Thank you for submitting</h1>
+        <p>
+          Your acount was created and you're now a member of Lucky 7 website.
+        </p>
+      </div>
+    );
+  }
 
   const clearForm = (data) => {
     console.log(data);
@@ -223,15 +276,9 @@ const Form = (props) => {
           any time.
         </p>
 
-        {props.formType === "Trial" ? (
-          <button className="pink-btn trial" type="submit">
-            Start Trial
-          </button>
-        ) : (
-          <button className="pink-btn demo" type="submit">
-            Book Demo
-          </button>
-        )}
+        <button className="pink-btn trial" type="submit">
+          {props.formType === "Trial" ? "Start Trial" : "Book Demo"}
+        </button>
       </form>
     </>
   );

@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
-import Step from "./step.png";
 import Step1 from "./Images/interface.svg";
+import Step2 from "./Images/service.svg";
+import Step3 from "./Images/customers.svg";
 
 function Installation() {
   return (
@@ -34,10 +35,10 @@ function Installation() {
             increase.
           </p>
         </div>
-        <img src={Step} alt="Installation" />
+        <img src={Step2} alt="Installation" />
       </div>
       <div className="step step-desktop">
-        <img src={Step} alt="Installation" />
+        <img src={Step2} alt="Installation" />
         <div className="text">
           <h2>
             How do I avoid customers churning, when support isn’t available?
@@ -63,7 +64,7 @@ function Installation() {
             target push notifications to specific segments.
           </p>
         </div>
-        <img src={Step} alt="Installation" />
+        <img src={Step3} alt="Installation" />
       </div>
     </div>
   );
