@@ -82,10 +82,18 @@ const Form = (props) => {
   if (submit) {
     return (
       <div className="thank-msg">
-        <h1>Thank you for submitting</h1>
-        <p>
-          Your acount was created and you're now a member of Lucky 7 website.
-        </p>
+        <h2>Thank you for filling out your information!</h2>
+        {props.formType === "Trial" ? (
+          <p>
+            We’ve sent you an email with your credentials to access the platform
+            at the email address you provided.
+            <br /> Please enjoy your free trial, and let us know if there’s
+            anything else we can help you with.
+          </p>
+        ) : (
+          <p>We will contact you as soon as possible!</p>
+        )}
+        <p>The BotXO Team</p>
       </div>
     );
   }

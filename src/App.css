@@ -406,6 +406,16 @@ form .note {
   text-align: left;
 }
 
+.thank-msg {
+  text-align: left;
+  margin-top: 20%;
+}
+
+.thank-msg p {
+  text-align: left;
+  margin-top: 25px;
+}
+
 /****************TABLET VIEW***********************/
 @media all and (min-width: 768px) {
   header {
@@ -475,7 +485,7 @@ form .note {
   }
 
   #installation .step .text p {
-    width: 85%;
+    width: 80%;
   }
 
   #installation .step .text h2:before {
@@ -490,7 +500,9 @@ form .note {
   }
 
   #installation .step img {
-    width: 100%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: inherit;
   }
 

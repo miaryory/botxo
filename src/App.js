@@ -12,7 +12,9 @@ function App() {
   return (
     <>
       <header>
-        <img id="logo" src={logo} alt="BotXO Logo" />
+        <a href="https://www.botxo.ai/">
+          <img id="logo" src={logo} alt="BotXO Logo" />
+        </a>
         <div className="navigation">
           <a href="#features">Features</a>
           <a href="#installation">Installation</a>
