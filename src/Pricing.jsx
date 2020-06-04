@@ -13,8 +13,11 @@ function Pricing() {
             <h2>BotXO Enterprise</h2>
             <p>We know enterprises have unique requirements.</p>
           </div>
-          <p className="price">3000</p>
-          <p>/month</p>
+          <div className="price-section">
+            <p className="currency">€</p>
+            <p className="price">3000</p>
+            <p className="monthly">/month</p>
+          </div>
           <div className="features">
             <p>All essential features +</p>
             <p>5 live* bots</p>
@@ -33,8 +36,11 @@ function Pricing() {
             <h2>BotXO Business</h2>
             <p>When it is time to do more.</p>
           </div>
-          <p className="price">800</p>
-          <p>/month</p>
+          <div className="price-section">
+            <p className="currency">€</p>
+            <p className="price">800</p>
+            <p className="monthly">/month</p>
+          </div>
           <div className="features">
             <p>All essential features +</p>
             <p>3 live* bots</p>
@@ -53,8 +59,11 @@ function Pricing() {
             <h2>BotXO Essential</h2>
             <p>Start simple and scale when ready.</p>
           </div>
-          <p className="price">500</p>
-          <p>/month</p>
+          <div className="price-section">
+            <p className="currency">€</p>
+            <p className="price">500</p>
+            <p className="monthly">/month</p>
+          </div>
           <div className="features">
             <p>All essential features</p>
             <p>1 live* bot</p>

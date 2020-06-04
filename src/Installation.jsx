@@ -20,7 +20,7 @@ function Installation() {
             go.
           </p>
         </div>
-        <img src={Step1} alt="Installation" />
+        <img src={Step1} alt="Use our templates" />
       </div>
       <div className="step step-mobile">
         <div className="text">
@@ -35,10 +35,10 @@ function Installation() {
             increase.
           </p>
         </div>
-        <img src={Step2} alt="Installation" />
+        <img src={Step2} alt="24/7 service" />
       </div>
       <div className="step step-desktop">
-        <img src={Step2} alt="Installation" />
+        <img src={Step2} alt="24/7 service" />
         <div className="text">
           <h2>
             How do I avoid customers churning, when support isn’t available?
@@ -64,7 +64,7 @@ function Installation() {
             target push notifications to specific segments.
           </p>
         </div>
-        <img src={Step3} alt="Installation" />
+        <img src={Step3} alt="Boost customer engagement" />
       </div>
     </div>
   );

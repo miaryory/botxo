@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 10</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.00015 0.00025 12.00015 0.00025 12.00015 8.17701416 0.00015 8.17701416"></polygon>
+    </defs>
+    <g id="Products-🖖🏼" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Products:-Commerce" transform="translate(-112.000000, -1089.000000)">
+            <g id="Group-10" transform="translate(112.000000, 1089.000000)">
+                <circle id="Oval-2" fill="#FFC782" fill-rule="nonzero" cx="12" cy="12" r="12"></circle>
+                <g id="Group-3" transform="translate(6.000000, 8.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M4.48010187,7.81379978 C4.40197809,7.81379978 4.32697927,7.78255027 4.27198013,7.72755113 L1.08577991,4.54135092 C0.971406697,4.4269777 0.971406697,4.24073061 1.08577991,4.12573241 C1.20077811,4.01073421 1.3870252,4.01073421 1.50202341,4.12573241 L4.48010187,7.10381088 L10.4975079,1.08577991 C10.613131,0.971406697 10.7987531,0.971406697 10.9137513,1.08577991 C11.0287496,1.20077811 11.0287496,1.3870252 10.9137513,1.50202341 L4.68759863,7.72755113 C4.63259949,7.78255027 4.55822565,7.81379978 4.48010187,7.81379978" id="Fill-1" stroke="#5C270E" fill="#5C270E" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

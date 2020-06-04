@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
+import Checkmark from "./Images/orange.svg";
+
 let Recaptcha = require("react-recaptcha");
 
 let callback = function () {
@@ -15,6 +17,7 @@ const Form = (props) => {
   const [tel, setTel] = useState("");
   const [showPassword, setShow] = useState(false);
   const [showPasswordBtn, setShowBtn] = useState("Show");
+  const [reCaptchaResponse, setreCaptchaResponse] = useState(false);
 
   //fetching all the current users whi have an account and store it
   const [users, setUsers] = useState([]);
@@ -48,6 +51,12 @@ const Form = (props) => {
   }
 
   const { register, handleSubmit, errors } = useForm();
+
+  //check recaptcha validation
+  function verifyCallback() {
+    setreCaptchaResponse(true);
+  }
+
   const onSubmit = (data) => {
     //check if the user already have an account
     if (isMember(users, email)) {
@@ -82,7 +91,16 @@ const Form = (props) => {
   if (submit) {
     return (
       <div className="thank-msg">
-        <h2>Thank you for filling out your information!</h2>
+        <img src={Checkmark} alt="Thank you!" />
+        <h1
+          className="form-headline"
+          style={{
+            fontSize: "2em",
+            fontWeight: "bold",
+          }}
+        >
+          Thank you for filling out your information!
+        </h1>
         {props.formType === "Trial" ? (
           <p>
             We’ve sent you an email with your credentials to access the platform
@@ -106,6 +124,7 @@ const Form = (props) => {
     setCompany("");
     setPassword("");
     setTel("");
+    setreCaptchaResponse(false);
   };
 
   const showIt = (e) => {
@@ -231,15 +250,11 @@ const Form = (props) => {
             name="phone"
             ref={register({
               required: "Phone number is required",
+              pattern: {
+                value: /^[2-9]{2}\d{8}$/,
+                message: "Invalid phone number. Format: 45XXXXXXXX",
+              },
             })}
-
-            // pattern: {
-            //   value: /^[2-9]{2}\d{8}$/,
-            //   message: "Invalid phone number",
-            // },
-            // /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/
-
-            // /[2-9]{2}\d{8}
           />
           {errors.phone && <p className="errorMsg">{errors.phone.message}</p>}
         </label>
@@ -273,7 +288,13 @@ const Form = (props) => {
             sitekey="6Le3OPwUAAAAAAUl7MH2lBijB2A86SmJjgwuUCDM"
             render="explicit"
             onloadCallback={callback}
+            verifyCallback={verifyCallback}
           />
+          {reCaptchaResponse ? (
+            <></>
+          ) : (
+            <p className="errorMsg">reCpatcha validation required</p>
+          )}
         </div>
 
         <p className="note">

@@ -8,7 +8,11 @@ function CTABottom() {
     <div id="ctabottom">
       <div className="text">
         <h1>Try now, decide later</h1>
-        <p>✓ 14 days trial ✓ Easy set-up ✓ No credit card required</p>
+        <div className="trial-features">
+          <p>✓ 14 days trial</p>
+          <p>✓ Easy set-up</p>
+          <p>✓ No credit card required</p>
+        </div>
       </div>
       <div className="CTA">
         <TrialBtn />
