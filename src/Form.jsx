@@ -151,7 +151,7 @@ const Form = (props) => {
           >
             Sign up for a free trial
           </h1>
-          <p>
+          <p className="form-description">
             The DIY option. Get free access to our platform and all its features
             for 14 days, no credit card required. Start building your first
             chatbot with the help of our tutorials
@@ -169,7 +169,7 @@ const Form = (props) => {
           >
             Book a Demo
           </h1>
-          <p>
+          <p className="form-description">
             The guided tour. Have one of our humans show you our platform’s
             capabilities, how it can fit your business and how to integrate it
             with your CRM and business systems.
