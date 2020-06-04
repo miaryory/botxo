@@ -48,9 +48,7 @@ footer {
 /****************BANNER***********************/
 
 #banner {
-  /* border: 1px solid white; */
   background-color: var(--dark-purple);
-  /* height: 85vh; */
   color: white;
   text-align: center;
   padding-top: 5vh;
@@ -142,8 +140,6 @@ button {
 
 .all-features {
   padding-top: 50px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
 .all-features .one-feature,
@@ -155,6 +151,13 @@ button {
   padding: 10%;
   margin: 7%;
   word-wrap: break-word;
+}
+
+.all-features .one-feature {
+  width: 70vw;
+  max-width: 300px;
+  margin: auto;
+  margin-bottom: 30px;
 }
 
 .all-features .one-feature .feature-icon {
@@ -483,6 +486,18 @@ form .note {
   #installation {
     padding-left: 10vw;
     padding-right: 10vw;
+  }
+
+  .all-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .all-features .one-feature {
+    width: inherit;
+    max-width: inherit;
+    margin: inherit;
+    margin-bottom: inherit;
   }
 
   .all-features .one-feature {
